@@ -45,7 +45,7 @@ md-switch {
 .toggle-option {
 	font-size: 1.2em;
 	min-height: 32px;
-	padding: 8px 16px;
+	padding: 10px 10px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -56,7 +56,7 @@ md-switch {
 .toggle-option-content {
 	font-size: 1.2em;
 	min-height: 32px;
-	padding: 0px 16px;
+	padding: 0px 10px;
 	padding-bottom: 8px;
 	display: block;
 	align-items: center;
@@ -73,7 +73,7 @@ md-switch {
 	display: flex;
 	justify-content: flex-start;
 	width: 100%;
-	padding: 8px 16px;
+	padding: 10px 10px;
 	font-size: 1.6em;
 	font-weight: 600;
 	color: var(--md-sys-color-primary);
@@ -86,7 +86,7 @@ md-switch {
 	align-items: center;
 	width: 100%;
 	height: 64px;
-	padding: 0 16px;
+	padding: 0px 10px;
 	box-sizing: border-box;
 	user-select: none;
 }
@@ -108,7 +108,7 @@ md-switch {
 }
 .enabled-config {
 	font-family: monospace;
-	padding: 16px;
+	padding: 10px;
 	font-size: 1.4em;
 	background-color: var(--md-sys-color-surface-container-lowest);
 	box-sizing: border-box;
@@ -121,7 +121,7 @@ md-switch {
 	display: flex;
 	flex-direction: column;
 	gap: 14px;
-	padding: 16px;
+	padding: 10px;
 	box-sizing: border-box;
 }
 .custom-uname-buttons {
@@ -148,11 +148,11 @@ md-tabs {
 	box-sizing: border-box;
 }
 .textarea-container {
-	padding: 0;
-	padding-bottom: 16px;
+	padding: 0px;
+	padding-bottom: 10px;
 }
 .textarea-container .content {
 	width: 100%;
-	padding: 0 16px;
+	padding: 0px 10px;
 	box-sizing: border-box;
 }

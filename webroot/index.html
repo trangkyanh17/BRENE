@@ -22,7 +22,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Developer Options
-						<md-switch id="developer_options"></md-switch>
+						<md-switch icons id="developer_options"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Enable or disable developer options</div>
@@ -33,7 +33,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						USB Debugging
-						<md-switch id="usb_debugging"></md-switch>
+						<md-switch icons id="usb_debugging"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Enable or disable USB debugging</div>
@@ -44,7 +44,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Wireless Debugging
-						<md-switch id="wireless_debugging"></md-switch>
+						<md-switch icons id="wireless_debugging"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Enable or disable wireless debugging</div>
@@ -58,7 +58,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Hide /data/local/tmp Items
-						<md-switch id="hide_data_local_tmp"></md-switch>
+						<md-switch icons id="hide_data_local_tmp"></md-switch>
 					</label>
 					<md-ripple></md-ripple>
 				</div>
@@ -66,7 +66,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Hide /sdcard/Android/data Items
-						<md-switch id="hide_sdcard_android_data"></md-switch>
+						<md-switch icons id="hide_sdcard_android_data"></md-switch>
 					</label>
 					<md-ripple></md-ripple>
 				</div>
@@ -74,7 +74,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Module Injections Hiding
-						<md-switch id="hide_injections"></md-switch>
+						<md-switch icons id="hide_injections"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Hide injections, /data/adb/modules/module_name/system/*/*.*</div>
@@ -85,7 +85,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Zygisk Module Injections Hiding
-						<md-switch id="hide_zygisk_modules"></md-switch>
+						<md-switch icons id="hide_zygisk_modules"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Hide zygisk injections, /data/adb/modules/module_name/zygisk/*.so</div>
@@ -96,7 +96,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Hide Suspicious Mounts For Non-su Processes
-						<md-switch id="hide_sus_mnts_for_non_su_procs"></md-switch>
+						<md-switch icons id="hide_sus_mnts_for_non_su_procs"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Hide sus mounts from /proc/self/[mounts|mountinfo|mountstat] for non-su processes.</div>
@@ -110,7 +110,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Rooted Apps Folders Hiding
-						<md-switch id="hide_rooted_app_folders"></md-switch>
+						<md-switch icons id="hide_rooted_app_folders"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">/sdcard/MT2</div>
@@ -125,7 +125,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Custom Recovery Folders Hiding
-						<md-switch id="hide_custom_recovery_folders"></md-switch>
+						<md-switch icons id="hide_custom_recovery_folders"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">/sdcard/Fox (OrangeFox Recovery)</div>
@@ -139,7 +139,7 @@
 				<!-- <div class="list-item">
 					<label class="toggle-option">
 						modules.img
-						<md-switch id="hide_modules_img"></md-switch>
+						<md-switch icons id="hide_modules_img"></md-switch>
 					</label>
 					<md-ripple></md-ripple>
 				</div> -->
@@ -190,7 +190,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						AVC Log Spoofing
-						<md-switch id="enable_avc_log_spoofing"></md-switch>
+						<md-switch icons id="enable_avc_log_spoofing"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Spoofing the sus 'su' tcontext shown in avc log in kernel.</div>
@@ -205,7 +205,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						/proc/cmdline or /proc/bootconfig Spoofing
-						<md-switch id="proc_cmdline_bootconfig_spoofing"></md-switch>
+						<md-switch icons id="proc_cmdline_bootconfig_spoofing"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">No root process detects it for now, and this spoofing won't help much actually</div>
@@ -218,7 +218,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Uname Spoofing
-						<md-switch id="uname_spoofing"></md-switch>
+						<md-switch icons id="uname_spoofing"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Spoof uname for all processes</div>
@@ -230,7 +230,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Custom Uname Spoofing
-						<md-switch id="custom_uname_spoofing"></md-switch>
+						<md-switch icons id="custom_uname_spoofing"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Spoof uname for all processes, set string to 'default' to imply the function to use original string.</div>
@@ -267,7 +267,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						SuSFS Logs
-						<md-switch id="enable_log"></md-switch>
+						<md-switch icons id="enable_log"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Enable or disable log in kernel</div>
@@ -278,7 +278,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						SELinux
-						<md-switch id="selinux"></md-switch>
+						<md-switch icons id="selinux"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Enable or disable enforcing mode</div>
@@ -292,7 +292,7 @@
 				<div class="list-item">
 					<label class="toggle-option">
 						Kernel Umount
-						<md-switch id="kernel_umount"></md-switch>
+						<md-switch icons id="kernel_umount"></md-switch>
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Controls whether kernel automatically unmounts modules when not needed.</div>

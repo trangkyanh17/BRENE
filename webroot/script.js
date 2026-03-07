@@ -15,7 +15,6 @@ const configs = [
 		action: enabled => setFeature(`${SUSFS_BIN} hide_sus_mnts_for_non_su_procs ${enabled ? 1 : 0}`)
 	},
 	{id: 'uname_spoofing'},
-	{id: 'uname2_spoofing'},
 	{id: 'hide_data_local_tmp'},
 	// { id: 'hide_modules_img' },
 	{id: 'hide_zygisk_modules'},

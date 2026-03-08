@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -159,7 +159,7 @@
 								id="custom_sus_map_text_field"
 								type="textarea"
 								rows="9"
-								label="Custom sus map"
+								label="自定义可疑映射路径"
 							></md-filled-text-field>
 						</div>
 						<div class="snap-item">
@@ -168,7 +168,7 @@
 								id="custom_sus_path_text_field"
 								type="textarea"
 								rows="9"
-								label="Custom sus path"
+								label="自定义可疑路径"
 							></md-filled-text-field>
 						</div>
 						<div class="snap-item">
@@ -177,7 +177,7 @@
 								id="custom_sus_path_loop_text_field"
 								type="textarea"
 								rows="9"
-								label="Custom sus path loop"
+								label="自定义可疑路径循环"
 							></md-filled-text-field>
 						</div>
 					</div>
@@ -237,10 +237,14 @@
 					<md-ripple></md-ripple>
 				</div>
 				<div class="custom-uname-content list-item">
-					<md-outlined-text-field label="Kernel Release" placeholder="e.g. 5.10.123-android12" id="custom_uname_release"></md-outlined-text-field>
 					<md-outlined-text-field
-						label="Kernel Version"
-						placeholder="e.g. #1 SMP PREEMPT Mon Jan 1 18:00:00 UTC 2026"
+						label="内核版本号（Kernel Release）"
+						placeholder="例如：5.10.123-android12"
+						id="custom_uname_release"
+					></md-outlined-text-field>
+					<md-outlined-text-field
+						label="内核构建信息（Kernel Version）"
+						placeholder="例如：#1 SMP PREEMPT Mon Jan 1 18:00:00 UTC 2026"
 						id="custom_uname_version"
 					></md-outlined-text-field>
 					<div class="custom-uname-buttons">
@@ -253,9 +257,9 @@
 					<md-outlined-text-field
 						id="verified_boot_hash_text_field"
 						type="textarea"
-						label="Verified Boot Hash Spoofing"
+						label="已验证启动哈希值（Verified Boot Hash）"
 						rows="3"
-						placeholder="e.g. df2352c282aj56e1489a3e220305hb827e54ba65a1293ab7409f2d46a3666b5a (64 digits)"
+						placeholder="例如：df2352c282aj56e1489a3e220305hb827e54ba65a1293ab7409f2d46a3666b5a (64 digits)"
 					></md-outlined-text-field>
 					<md-filled-button id="verified_boot_hash_button">应用（APPLY）</md-filled-button>
 				</div>

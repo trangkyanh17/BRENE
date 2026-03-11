@@ -15,10 +15,10 @@ PERSISTENT_DIR=/data/adb/brene
 #### Hide target path and all its sub-paths from all user app processes which have no root permission granted ####
 ## Make sure the target file/directory has no more overlay/mount operation on going. Or add it after it is done being overlayed or mounted ##
 # For some custom ROM #
-[ -d /system/addon.d ] && ${SUSFS_BIN} add_sus_path /system/addon.d
-[ -f /vendor/bin/install-recovery.sh ] && ${SUSFS_BIN} add_sus_path /vendor/bin/install-recovery.sh
-[ -f /system/bin/install-recovery.sh ] && ${SUSFS_BIN} add_sus_path /system/bin/install-recovery.sh
-[ -f /system/vendor/bin/install-recovery.sh ] && ${SUSFS_BIN} add_sus_path /system/vendor/bin/install-recovery.sh
+[ -d /system/addon.d ] && ${SUSFS_BIN} add_sus_path_loop /system/addon.d
+[ -f /vendor/bin/install-recovery.sh ] && ${SUSFS_BIN} add_sus_path_loop /vendor/bin/install-recovery.sh
+[ -f /system/bin/install-recovery.sh ] && ${SUSFS_BIN} add_sus_path_loop /system/bin/install-recovery.sh
+[ -f /system/vendor/bin/install-recovery.sh ] && ${SUSFS_BIN} add_sus_path_loop /system/vendor/bin/install-recovery.sh
 
 
 #### Spoof the stat of file/directory dynamically ####

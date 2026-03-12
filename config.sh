@@ -2,7 +2,6 @@ config_enable_avc_log_spoofing=1
 config_hide_custom_recovery_folders=1
 config_hide_data_local_tmp=1
 config_hide_rooted_app_folders=1
-config_hide_sdcard_android_data=1
 config_hide_sus_mnts_for_non_su_procs=1
 config_kernel_umount=1
 config_uname_spoofing=1
@@ -10,6 +9,8 @@ config_hide_zygisk_modules=1
 config_hide_injections=1
 config_selinux=1
 config_proc_cmdline_bootconfig_spoofing=1
+
+config_hide_sdcard_android_data=0
 config_usb_debugging=0
 config_developer_options=0
 config_wireless_debugging=0

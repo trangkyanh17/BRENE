@@ -191,16 +191,25 @@ exec(`cat ${PERSISTENT_DIR}/config.sh`).then(result => {
 	})
 })()
 
+// TEMP
 // Simplified Chinese WebUI
 ;(() => {
 	const button = document.getElementById('simplified_chinese_webui')
+	const dialog = document.getElementById('confirmation-dialog')
 
 	button?.addEventListener('click', () => {
-		exec(`cp -f ${MODDIR}/simplified_chinese_webui.html ${MODDIR}/webroot/index.html`).then(result => {
-			toast(result.errno === 0 ? 'Success' : result.stderr)
-		})
+		dialog.show()
+	})
+
+	dialog?.addEventListener('closed', () => {
+		if (dialog.returnValue === 'confirm') {
+			exec(`cp -f ${MODDIR}/simplified_chinese_webui.html ${MODDIR}/webroot/index.html`).then(result => {
+				toast(result.errno === 0 ? 'Success' : result.stderr)
+			})
+		}
 	})
 })()
+// TEMP
 
 // Custom sus map
 ;(() => {

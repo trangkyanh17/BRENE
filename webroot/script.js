@@ -46,7 +46,8 @@ const configs = [
 	{id: 'proc_cmdline_bootconfig_spoofing'},
 	{id: 'pif_props'},
 	{id: 'rom_props'},
-	{id: 'non_standard_sdcard_paths_hiding'}
+	{id: 'non_standard_sdcard_paths_hiding'},
+	{id: 'non_standard_sdcard_android_paths_hiding'}
 ]
 
 // Load enabled features

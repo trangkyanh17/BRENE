@@ -15,6 +15,7 @@ config_usb_debugging=0
 config_developer_options=0
 config_wireless_debugging=0
 config_non_standard_sdcard_paths_hiding=0
+config_non_standard_sdcard_android_paths_hiding=0
 config_pif_props=0
 config_rom_props=0
 config_enable_log=0

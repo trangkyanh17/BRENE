@@ -126,6 +126,26 @@ if [[ $config_non_standard_sdcard_paths_hiding == 1 ]]; then
 	done
 fi
 
+if [[ $config_non_standard_sdcard_android_paths_hiding == 1 ]]; then
+	standard_paths="data media obb"
+	
+	for i in /sdcard/Android/*; do
+		pass=0
+		for x in $standard_paths; do
+			if [[ "/sdcard/Android/$x" == "$i" ]]; then
+				pass=1
+				break
+			fi
+		done
+
+		if [[ "$pass" == "1" ]]; then
+			continue
+		fi
+
+		${SUSFS_BIN} add_sus_path_loop "$i"
+	done
+fi
+
 if [[ $config_hide_rooted_app_folders == 1 ]]; then
 	[ -d /sdcard/MT2 ] && ${SUSFS_BIN} add_sus_path_loop /sdcard/MT2
 	[ -d /sdcard/rlgg ] && ${SUSFS_BIN} add_sus_path_loop /sdcard/rlgg

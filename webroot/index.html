@@ -61,13 +61,14 @@
 						<md-switch icons id="non_standard_sdcard_paths_hiding"></md-switch>
 					</label>
 					<div class="toggle-option-content">
-						<div class="toggle-info">e.g. The following paths</div>
-						<div class="toggle-info">/sdcard/MT2 (MT Manager)</div>
-						<div class="toggle-info">/sdcard/TWRP (Team Win Recovery Project)</div>
 						<div class="toggle-info">Standard Paths:</div>
 						<div class="toggle-info">Alarms, Android, Audiobooks, DCIM, Documents</div>
 						<div class="toggle-info">Download, Movies, Music, Notifications, Pictures</div>
 						<div class="toggle-info">Podcasts, Recordings, Ringtones</div>
+						<div class="toggle-info">Only effective for umounted process with uid >= 10000</div>
+						<div class="toggle-info">e.g. the following paths</div>
+						<div class="toggle-info">/sdcard/MT2 (MT Manager)</div>
+						<div class="toggle-info">/sdcard/TWRP (Team Win Recovery Project)</div>
 					</div>
 					<md-ripple></md-ripple>
 				</div>
@@ -78,10 +79,11 @@
 						<md-switch icons id="non_standard_sdcard_android_paths_hiding"></md-switch>
 					</label>
 					<div class="toggle-option-content">
-						<div class="toggle-info">e.g. The following paths</div>
-						<div class="toggle-info">/sdcard/Android/fas-rs</div>
 						<div class="toggle-info">Standard Paths:</div>
 						<div class="toggle-info">data, media, obb</div>
+						<div class="toggle-info">Only effective for umounted process with uid >= 10000</div>
+						<div class="toggle-info">e.g. the following paths</div>
+						<div class="toggle-info">/sdcard/Android/fas-rs</div>
 					</div>
 					<md-ripple></md-ripple>
 				</div>
@@ -92,7 +94,8 @@
 						<md-switch icons id="hide_data_local_tmp"></md-switch>
 					</label>
 					<div class="toggle-option-content">
-						<div class="toggle-info">e.g. The following paths</div>
+						<div class="toggle-info">Only effective for umounted process with uid >= 10000</div>
+						<div class="toggle-info">e.g. the following paths</div>
 						<div class="toggle-info">/data/local/tmp/main.jar</div>
 						<div class="toggle-info">/data/local/tmp/DebugAssistant.log</div>
 					</div>
@@ -104,6 +107,9 @@
 						/sdcard/Android/data Paths Hiding
 						<md-switch icons id="hide_sdcard_android_data"></md-switch>
 					</label>
+					<div class="toggle-option-content">
+						<div class="toggle-info">Only effective for umounted process with uid >= 10000</div>
+					</div>
 					<md-ripple></md-ripple>
 				</div>
 
@@ -113,8 +119,11 @@
 						<md-switch icons id="hide_sus_mnts_for_non_su_procs"></md-switch>
 					</label>
 					<div class="toggle-option-content">
-						<div class="toggle-info">Hide sus mounts from /proc/self/[mounts|mountinfo|mountstat] for non-su processes.</div>
-						<div class="toggle-info">e.g. Prevent traces left by zygote, Zygote Mountinfo Leak</div>
+						<div class="toggle-info">
+							Prevent zygote from caching the sus mounts in memory, and to keep them hidden from /proc/self/[mounts|mountinfo|mountstat] for non-su
+							processes
+						</div>
+						<div class="toggle-info">e.g. the following detections</div>
 						<div class="toggle-info">Holmes: Futile Trace Hide</div>
 						<div class="toggle-info">Native Test: Futile Hide (08)</div>
 					</div>
@@ -127,6 +136,7 @@
 						<md-switch icons id="hide_injections"></md-switch>
 					</label>
 					<div class="toggle-option-content">
+						<div class="toggle-info">Only effective for umounted process with uid >= 10000</div>
 						<div class="toggle-info">Hide injections, /data/adb/modules/module_name/system/*/*.*</div>
 					</div>
 					<md-ripple></md-ripple>
@@ -138,6 +148,7 @@
 						<md-switch icons id="hide_zygisk_modules"></md-switch>
 					</label>
 					<div class="toggle-option-content">
+						<div class="toggle-info">Only effective for umounted process with uid >= 10000</div>
 						<div class="toggle-info">Hide zygisk injections, /data/adb/modules/module_name/zygisk/*.so</div>
 					</div>
 					<md-ripple></md-ripple>
@@ -232,10 +243,10 @@
 						<md-switch icons id="enable_avc_log_spoofing"></md-switch>
 					</label>
 					<div class="toggle-option-content">
-						<div class="toggle-info">Spoofing the sus 'su' tcontext shown in avc log in kernel.</div>
+						<div class="toggle-info">Spoof the sus tcontext 'su' with 'u:r:priv_app:s0:c512,c768' shown in avc log in kernel</div>
 						<div class="toggle-info">
-							Enabling this will sometimes make developers hard to identify the cause when they are debugging with some permission or selinux issue,
-							so users are advised to disable this when doing so.
+							Enabling this may sometimes make developers hard to identify the cause when they are debugging with some permission or selinux issues,
+							so users are advised to disable this when doing so
 						</div>
 					</div>
 					<md-ripple></md-ripple>
@@ -247,7 +258,9 @@
 						<md-switch icons id="proc_cmdline_bootconfig_spoofing"></md-switch>
 					</label>
 					<div class="toggle-option-content">
+						<div class="toggle-info">Spoof the output of /proc/cmdline (non-gki) or /proc/bootconfig (gki) from a text file</div>
 						<div class="toggle-info">No root process detects it for now, and this spoofing won't help much actually</div>
+						<div class="toggle-info">e.g. the following</div>
 						<div class="toggle-info">androidboot.warranty_bit = "0"</div>
 						<div class="toggle-info">androidboot.verifiedbootstate = "green"</div>
 					</div>
@@ -261,8 +274,10 @@
 					</label>
 					<div class="toggle-option-content">
 						<div class="toggle-info">Spoof uname for all processes</div>
-						<div class="toggle-info">e.g. 5.10.123-android12-9-g690101101069</div>
-						<div class="toggle-info">e.g. #1 SMP PREEMPT Wed Jun 9 03:20:30 UTC 2069</div>
+						<div class="toggle-info">Only 'release' and 'version' are spoofed as others are no longer needed</div>
+						<div class="toggle-info">e.g. the following</div>
+						<div class="toggle-info">Kernel Release: 5.10.123-android12-9-g690101101069</div>
+						<div class="toggle-info">Kernel Version: #1 SMP PREEMPT Wed Jun 9 03:20:30 UTC 2069</div>
 					</div>
 					<md-ripple></md-ripple>
 				</div>
@@ -273,15 +288,19 @@
 						<md-switch icons id="custom_uname_spoofing"></md-switch>
 					</label>
 					<div class="toggle-option-content">
-						<div class="toggle-info">Spoof uname for all processes, set string to 'default' to imply the function to use original string.</div>
+						<div class="toggle-info">Spoof uname for all processes, set string to 'default' to imply the function to use original string</div>
 					</div>
 					<md-ripple></md-ripple>
 				</div>
 				<div class="custom-uname-content list-item">
-					<md-outlined-text-field label="Kernel Release" placeholder="e.g. 5.10.123-android12" id="custom_uname_release"></md-outlined-text-field>
+					<md-outlined-text-field
+						label="Kernel Release"
+						placeholder="e.g. 5.10.123-android12-9-g690101101069"
+						id="custom_uname_release"
+					></md-outlined-text-field>
 					<md-outlined-text-field
 						label="Kernel Version"
-						placeholder="e.g. #1 SMP PREEMPT Mon Jan 1 18:00:00 UTC 2026"
+						placeholder="e.g. #1 SMP PREEMPT Wed Jun 9 03:20:30 UTC 2069"
 						id="custom_uname_version"
 					></md-outlined-text-field>
 					<div class="custom-uname-buttons">
@@ -294,7 +313,7 @@
 					<md-outlined-text-field
 						id="verified_boot_hash_text_field"
 						type="textarea"
-						label="Verified Boot Hash Spoofing"
+						label="Android Verified Boot Hash Spoofing"
 						rows="3"
 						placeholder="e.g. df2352c282aj56e1489a3e220305hb827e54ba65a1293ab7409f2d46a3666b5a (64 digits)"
 					></md-outlined-text-field>
@@ -335,18 +354,18 @@
 						<md-switch icons id="enable_log"></md-switch>
 					</label>
 					<div class="toggle-option-content">
-						<div class="toggle-info">Enable or disable log in kernel</div>
+						<div class="toggle-info">Enable or disable SuSFS log in kernel</div>
 					</div>
 					<md-ripple></md-ripple>
 				</div>
 
 				<div class="list-item">
 					<label class="toggle-option">
-						SELinux
+						SELinux Enforcing
 						<md-switch icons id="selinux"></md-switch>
 					</label>
 					<div class="toggle-option-content">
-						<div class="toggle-info">Enable or disable enforcing mode</div>
+						<div class="toggle-info">Enable or disable SELinux enforcing mode</div>
 					</div>
 					<md-ripple></md-ripple>
 				</div>
@@ -376,7 +395,7 @@
 						<md-switch icons id="kernel_umount"></md-switch>
 					</label>
 					<div class="toggle-option-content">
-						<div class="toggle-info">Controls whether kernel automatically unmounts modules when not needed.</div>
+						<div class="toggle-info">Controls whether kernel automatically unmounts modules when not needed</div>
 					</div>
 					<md-ripple></md-ripple>
 				</div>

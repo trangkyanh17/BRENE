@@ -35,7 +35,7 @@ md-switch {
 	pointer-events: all;
 }
 .settings-group {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
@@ -91,18 +91,18 @@ md-switch {
 	user-select: none;
 }
 .title {
-	font-size: 1.8em;
+	font-size: 2.2em;
 	line-height: 1;
 	display: flex;
 	align-items: flex-end;
 }
 .item-version {
-	font-size: 0.55em;
+	font-size: 0.6em;
 	font-weight: 500;
 	padding: 2px 5px;
 	background-color: var(--md-sys-color-surface-variant);
 	color: var(--md-sys-color-on-surface-variant);
-	border-radius: 4px;
+	border-radius: 8px;
 	margin: 2px 4px;
 	box-sizing: border-box;
 }
@@ -119,6 +119,10 @@ md-switch {
 a {
 	color: inherit;
 }
+md-filled-button {
+	font-size: 1em;
+}
+
 /* Custom uname spoofing */
 .custom-uname-content {
 	display: flex;

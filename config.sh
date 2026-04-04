@@ -8,6 +8,7 @@ config_enable_avc_log_spoofing=1
 config_hide_sus_mnts_for_non_su_procs=1
 config_proc_cmdline_bootconfig_spoofing=1
 config_non_standard_sdcard_paths_hiding=1
+config_android_system_properties_spoofing=1
 config_non_standard_sdcard_android_paths_hiding=1
 
 config_pif_props=0

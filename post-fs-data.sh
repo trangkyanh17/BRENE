@@ -130,13 +130,13 @@ fi
 # pass 'default' to tell susfs to use the default value by uname #
 # ${SUSFS_BIN} set_uname 'default' 'default'
 if [[ $config_custom_uname_spoofing == 1 ]]; then
-	printf "\n#####################\n" >> "${PERSISTENT_DIR}/logs.txt"
+	printf "#####################\n" >> "${PERSISTENT_DIR}/logs.txt"
 	printf "Custom Uname Spoofing" >> "${PERSISTENT_DIR}/logs.txt"
 	printf "\n#####################\n" >> "${PERSISTENT_DIR}/logs.txt"
 
 	brene_set_uname "${config_custom_uname_kernel_release}" "${config_custom_uname_kernel_version}"
 elif [[ $config_uname_spoofing == 1 ]]; then
-	printf "\n##############\n" >> "${PERSISTENT_DIR}/logs.txt"
+	printf "##############\n" >> "${PERSISTENT_DIR}/logs.txt"
 	printf "Uname Spoofing" >> "${PERSISTENT_DIR}/logs.txt"
 	printf "\n##############\n" >> "${PERSISTENT_DIR}/logs.txt"
 

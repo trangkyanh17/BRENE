@@ -33,18 +33,19 @@ const configs = [
 		id: 'selinux',
 		action: enabled => setFeature(`setenforce ${enabled ? 1 : 0}`)
 	},
-	{id: 'enable_log'},
-	{id: 'enable_avc_log_spoofing'},
-	{id: 'uname_spoofing'},
-	{id: 'hide_data_local_tmp'},
-	{id: 'hide_zygisk_modules'},
-	{id: 'hide_sdcard_android_data'},
-	{id: 'custom_uname_spoofing'},
-	{id: 'hide_injections'},
-	{id: 'proc_cmdline_bootconfig_spoofing'},
 	{id: 'pif_props'},
 	{id: 'rom_props'},
+	{id: 'enable_log'},
+	{id: 'uname_spoofing'},
+	{id: 'hide_injections'},
+	{id: 'hide_data_local_tmp'},
+	{id: 'hide_zygisk_modules'},
+	{id: 'custom_uname_spoofing'},
+	{id: 'enable_avc_log_spoofing'},
+	{id: 'hide_sdcard_android_data'},
+	{id: 'proc_cmdline_bootconfig_spoofing'},
 	{id: 'non_standard_sdcard_paths_hiding'},
+	{id: 'android_system_properties_spoofing'},
 	{id: 'non_standard_sdcard_android_paths_hiding'}
 ]
 
